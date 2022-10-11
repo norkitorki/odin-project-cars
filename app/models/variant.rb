@@ -1,3 +1,3 @@
 class Variant < ApplicationRecord
-  belongs_to :cars
+  belongs_to :car
 end
