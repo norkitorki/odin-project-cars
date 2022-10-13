@@ -17,6 +17,7 @@ class CarsController < ApplicationController
 
   # GET /cars/1/edit
   def edit
+    @car.variants.new
   end
 
   # POST /cars or /cars.json
@@ -65,6 +66,6 @@ class CarsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def car_params
-      params.require(:car).permit(:maker, :model, :year)
+      params.require(:car).permit(:maker, :model, :year, variants_attributes: %i[ value id _destroy ] )
     end
 end
