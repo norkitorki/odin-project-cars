@@ -8,7 +8,8 @@ export default class extends Controller {
     this.addLinkTarget.hidden = false;
   }
 
-  add() {
+  add(event) {
+    event.preventDefault();
     let newIndex = this.fieldTargets.length;
     let lastField = this.fieldTargets[newIndex - 1];
     let newField = lastField.cloneNode(true);
