@@ -14,4 +14,11 @@
     <%= car.year %>
   </p>
 
+  <% if car.variants.any? %>
+    <p>
+      <strong>Variants:</strong>
+      <%= car.variants.map(&:value).join(', ') %>
+    </p>
+  <% end %>
+
 </div>
