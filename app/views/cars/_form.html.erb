@@ -29,21 +29,27 @@
   <% if action_name == 'edit' %>
     <h3>Variants</h3>
 
-    <div data-controller="input">
-      <%= form.fields_for :variants do |v_form| %>
-        <div style="margin-bottom:5px;display:flex;gap:5px;align-items:center;" data-input-target="field">
-          <%= v_form.text_field :value %>
+    <%= form.fields_for :variants do |v_form| %>
+      <div class="field" style="margin-bottom:5px;display:flex;gap:5px;align-items:center;">
+        <%= v_form.text_field :value %>
 
-          <% if !v_form.object.new_record? %>
-            <%= v_form.label :_destroy %>
-            <%= v_form.check_box :_destroy %>
-          <% end %>
-        </div>
-      <% end %>
+        <% if !v_form.object.new_record? %>
+          <%= v_form.label :_destroy %>
+          <%= v_form.check_box :_destroy %>
+        <% end %>
+      </div>
+    <% end %>
 
-      <a href="#" data-action="input#add" data-input-target="addLink" hidden>
+    <div data-controller="input" data-input-field-class="field" hidden>
+      <a href="#" data-action="input#add">
         <svg style="width:20px;height:20px" viewBox="0 0 24 24">
           <path fill="currentColor" d="M20 14H14V20H10V14H4V10H10V4H14V10H20V14Z" />
+        </svg>
+      </a>
+
+      <a href="#" data-action="input#remove">
+        <svg style="width:20px;height:20px" viewBox="0 0 24 24">
+          <path fill="currentColor" d="M19,13H5V11H19V13Z" />
         </svg>
       </a>
     </div>
