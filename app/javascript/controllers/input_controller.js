@@ -35,6 +35,7 @@ export default class extends Controller {
     event.preventDefault();
 
     let fields = this.fields();
-    fields[fields.length - 1].remove();
+    let fieldCount = fields.length;
+    if (fieldCount > 1) { fields[fieldCount - 1].remove(); }
   }
 }
