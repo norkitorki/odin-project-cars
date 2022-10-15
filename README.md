@@ -1,24 +1,5 @@
-# README
+# Odin Project: Cars
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is the [Odin Project: Cars](https://www.theodinproject.com/lessons/ruby-on-rails-stimulus#exercises) project as part of the exercises for the Stimulus lesson of the Ruby On Rails course.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+This project consists of a very simple stimulus controller located at ``` app/javascript/controllers/input_controller.js ``` which allows the adding and removing of form input fields via javascript.
